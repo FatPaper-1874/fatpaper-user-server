@@ -700,3 +700,24 @@
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-13 17:45:27"}
 {"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-14 17:06:28"}
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-14 17:06:28"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: ER_BAD_DB_ERROR: Unknown database 'fatpaper_user' \u001b[49m\u001b[22m","timestamp":"2024-03-20 13:18:58"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-20 13:19:39"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-20 13:19:39"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-20 14:49:53"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-20 14:49:53"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-20 15:03:49"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-20 15:03:49"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-25 21:44:10"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-25 21:44:10"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-27 10:36:42"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-27 10:36:42"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client \u001b[49m\u001b[22m","timestamp":"2024-03-29 12:58:20"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client \u001b[49m\u001b[22m","timestamp":"2024-03-29 13:00:23"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client \u001b[49m\u001b[22m","timestamp":"2024-03-29 13:11:38"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: ER_BAD_DB_ERROR: Unknown database 'fatpaper_user' \u001b[49m\u001b[22m","timestamp":"2024-03-29 13:12:58"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-29 13:16:36"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 8002端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-29 13:16:36"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-03-31 16:05:08"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-03-31 16:05:08"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-04-02 12:14:02"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-04-02 12:14:02"}

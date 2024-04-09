@@ -36,7 +36,8 @@ async function bootstrap() {
 			serverLog(`${chalk.bold.bgGreen(` API服务启动成功 ${APIPORT}端口 `)} `);
 		});
 	} catch (e: any) {
-		serverLog(`${chalk.bold.bgRed(` 服务器出错: ${e.message} `)}`, "error");
+		serverLog(`${chalk.bold.bgRed(` 服务器出错: `)}`, "error");
+		console.log(e)
 	}
 }
 

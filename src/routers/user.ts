@@ -153,7 +153,7 @@ routerUser.post("/login", async (req, res) => {
 		try {
 			const user = await userLogin(useraccount, password, privateKey);
 			const tokenExpireTimeMs = 60 * 1000;
-			const token = await setToken(user.id, tokenExpireTimeMs);
+			const token = await setToken(user.id, user.isAdmin, tokenExpireTimeMs);
 			// setRedis(user.id, token, tokenExpireTimeMs);
 
 			const resContent: ResInterface = {
@@ -216,20 +216,16 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 		try {
 			const avatarFileName = filename + fileType;
 			const user = await createUser(useraccount, username, password, avatarFileName, userColor || undefined);
-			if (user) {
-				const resContent: ResInterface = {
-					status: 200,
-					msg: "注册成功",
-					data: user,
-				};
-				res.json(resContent);
-			} else {
-				throw new Error("数据库处理错误");
-			}
+			const resContent: ResInterface = {
+				status: 200,
+				msg: "注册成功",
+				data: user,
+			};
+			res.json(resContent);
 		} catch (e: any) {
 			const resContent: ResInterface = {
 				status: 500,
-				msg: "数据库处理错误",
+				msg: e.message || "数据库处理错误",
 			};
 			res.json(resContent);
 		}
