@@ -238,22 +238,4 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 	}
 });
 
-routerUser.get("/is-admin", async (req, res, next) => {
-	//@ts-ignore
-	const { openId, userId } = req.auth as { openId: string; userId: string; iat: number; exp: number };
-	if (!openId) {
-		const resContent: ResInterface = {
-			status: 400,
-			msg: "token错误",
-		};
-		res.status(400).json(resContent);
-	} else {
-		const resContent: ResInterface = {
-			status: 200,
-			data: { isAdmin: await isAdmin(openId) },
-		};
-		res.status(200).json(resContent);
-	}
-});
-
 export default routerUser;
