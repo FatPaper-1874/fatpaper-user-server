@@ -7,8 +7,6 @@ import routerUser from "./src/routers/user";
 import { serverLog } from "./src/utils/logger";
 import chalk from "chalk";
 import { TOKENKEY, APIPORT } from "./src/static";
-// import { redisClientInit } from "./src/utils/redis";
-import { roleValidation } from "./src/utils/role-validation";
 
 async function bootstrap() {
 	try {
