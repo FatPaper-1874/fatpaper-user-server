@@ -7,6 +7,7 @@ import path from "path";
 import fs from "fs";
 import { getImageMainColor } from "../utils";
 import { privateKey, publicKey } from "../utils/rsakey";
+import {deleteFiles, uploadFile} from "../utils/COS-uploader";
 // import { setRedis } from "../utils/redis";
 
 const avatarMulter = multer({ dest: "public/avatars" });
@@ -20,13 +21,13 @@ routerUser.get("/list", async (req, res, next) => {
 			status: 200,
 			data: { total, current: parseInt(page.toString()), userList },
 		};
-		res.json(resMsg);
+		res.status(200).json(resMsg);
 	} catch {
 		const resMsg: ResInterface = {
 			status: 500,
 			msg: "获取用户列表失败",
 		};
-		res.json(resMsg);
+		res.status(500).json(resMsg);
 	}
 });
 
@@ -76,20 +77,20 @@ routerUser.get("/info", async (req, res, next) => {
 // 				msg: "创建用户成功",
 // 				data: await createUser(username, password, avatar, color),
 // 			};
-// 			res.json(resMsg);
+// 			res.status(resMsg.status).json(resMsg);
 // 		} catch (e) {
 // 			const resMsg: ResInterface = {
 // 				status: 500,
 // 				msg: "数据库请求错误",
 // 			};
-// 			res.json(resMsg);
+// 			res.status(resMsg.status).json(resMsg);
 // 		}
 // 	} else {
 // 		const resMsg: ResInterface = {
 // 			status: 500,
 // 			msg: "参数错误",
 // 		};
-// 		res.json(resMsg);
+// 		res.status(resMsg.status).json(resMsg);
 // 	}
 // });
 
@@ -102,20 +103,20 @@ routerUser.get("/info", async (req, res, next) => {
 // 				msg: "更新用户信息成功",
 // 				data: await updateUser(id, username, avatar, color),
 // 			};
-// 			res.json(resMsg);
+// 			res.status(resMsg.status).json(resMsg);
 // 		} catch (e) {
 // 			const resMsg: ResInterface = {
 // 				status: 500,
 // 				msg: "数据库请求错误",
 // 			};
-// 			res.json(resMsg);
+// 			res.status(resMsg.status).json(resMsg);
 // 		}
 // 	} else {
 // 		const resMsg: ResInterface = {
 // 			status: 500,
 // 			msg: "参数错误",
 // 		};
-// 		res.json(resMsg);
+// 		res.status(resMsg.status).json(resMsg);
 // 	}
 // });
 
@@ -124,7 +125,7 @@ routerUser.get("/public-key", async (req, res, next) => {
 		status: 200,
 		data: publicKey,
 	};
-	res.json(resMsg);
+	res.status(200).json(resMsg);
 });
 
 routerUser.delete("/delete", async (req, res, next) => {
@@ -136,13 +137,13 @@ routerUser.delete("/delete", async (req, res, next) => {
 				msg: "删除成功",
 				data: await deleteUser(id.toString()),
 			};
-			res.json(resMsg);
+			res.status(200).json(resMsg);
 		} catch (e) {
 			const resMsg: ResInterface = {
 				status: 500,
 				msg: "数据库请求错误",
 			};
-			res.json(resMsg);
+			res.status(500).json(resMsg);
 		}
 	}
 });
@@ -161,20 +162,20 @@ routerUser.post("/login", async (req, res) => {
 				msg: "登录成功",
 				data: token,
 			};
-			res.json(resContent);
+			res.status(200).json(resContent);
 		} catch (e: any) {
 			const resContent: ResInterface = {
 				status: 400,
 				msg: e.message,
 			};
-			res.json(resContent);
+			res.status(400).json(resContent);
 		}
 	} else {
 		const resContent: ResInterface = {
 			status: 400,
 			msg: "请求参数错误",
 		};
-		res.json(resContent);
+		res.status(400).json(resContent);
 	}
 });
 
@@ -184,7 +185,7 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 			status: 400,
 			msg: "头像上传异常",
 		};
-		res.json(resContent);
+		res.status(400).json(resContent);
 		return;
 	}
 
@@ -196,45 +197,43 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 			status: 500,
 			msg: "文件后缀名不合法",
 		};
-		res.json(resMsg);
+		res.status(500).json(resMsg);
 		return;
 	}
 
 	const oldName = _path;
 	const avatarFilePath = oldName + fileType;
 
-	await new Promise<void>((resolve, reject) => {
-		fs.rename(oldName, avatarFilePath, () => {
-			resolve();
-		});
-	});
+	fs.renameSync(oldName, avatarFilePath);
 
 	const userColor = await getImageMainColor(path.join(process.cwd(), avatarFilePath));
 	const { useraccount, username, password } = req.body;
 
 	if (useraccount && username && password) {
+		const avatarFileName = filename + fileType;
 		try {
-			const avatarFileName = filename + fileType;
-			const user = await createUser(useraccount, username, password, avatarFileName, userColor || undefined);
+			const avatarFileUrl = await uploadFile({filePath: avatarFilePath, name: avatarFileName, targetPath: `fatpaper/user/avatar/`})
+			const user = await createUser(useraccount, username, password, avatarFileUrl, userColor || undefined);
 			const resContent: ResInterface = {
 				status: 200,
 				msg: "注册成功",
 				data: user,
 			};
-			res.json(resContent);
+			res.status(200).json(resContent);
 		} catch (e: any) {
+			deleteFiles([`fatpaper/user/avatar/${avatarFileName}`])
 			const resContent: ResInterface = {
 				status: 500,
 				msg: e.message || "数据库处理错误",
 			};
-			res.json(resContent);
+			res.status(500).json(resContent);
 		}
 	} else {
 		const resContent: ResInterface = {
 			status: 400,
 			msg: "请求参数错误",
 		};
-		res.json(resContent);
+		res.status(400).json(resContent);
 	}
 });
 

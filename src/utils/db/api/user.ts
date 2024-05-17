@@ -12,7 +12,6 @@ export const createUser = async (
     color?: string
 ) => {
     const user = await AppDataSource.manager.findOneBy(User, {useraccount});
-    console.log(user)
     if (user) throw new Error("已经存在的账号名")
     const decryptedPassword = decryptPassword(password);
     const {salt, passwordHash} = generatePasswordHash(decryptedPassword, getRandomString(16));
