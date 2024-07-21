@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon -r --exec ts-node ./app.ts",
-    "start": "ts-node ./app.ts"
+    "start": "tsc && node dist/fatpaper-user-server/app.js --omit=dev"
   },
   "devDependencies": {
     "@types/express": "^4.17.15",

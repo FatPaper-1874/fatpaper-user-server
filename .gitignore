@@ -10,6 +10,7 @@ lerna-debug.log*
 .DS_Store
 node_modules
 public/*/
+dist
 
 
 # local env files
