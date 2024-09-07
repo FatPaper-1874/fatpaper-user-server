@@ -893,3 +893,21 @@
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-05 16:18:22"}
 {"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-05 22:53:48"}
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-05 22:53:48"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-08-06 14:36:58"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-06 14:41:24"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-06 14:41:24"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-06 22:40:52"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-06 22:40:52"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-07 12:02:37"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-07 12:02:37"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-07 12:12:24"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-07 12:12:24"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-08 16:41:39"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-08 16:41:39"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-08-11 13:11:24"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-08-11 13:14:49"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-08-11 13:14:49"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-07 16:16:47"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-07 16:16:47"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-07 16:41:57"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-07 16:41:57"}
