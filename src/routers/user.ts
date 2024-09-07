@@ -7,7 +7,7 @@ import path from "path";
 import fs from "fs";
 import { getImageMainColor } from "../utils";
 import { privateKey, publicKey } from "../utils/rsakey";
-import {deleteFiles, uploadFile} from "../utils/COS-uploader";
+import {deleteFiles, uploadFile} from "../utils/file-uploader";
 // import { setRedis } from "../utils/redis";
 
 const avatarMulter = multer({ dest: "public/avatars" });
