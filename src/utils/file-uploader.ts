@@ -35,7 +35,7 @@ export async function uploadFile(file: UploadFile) {
         } else {
             try {
                 const newTargetPath = `${__FATPAPERUSERSERVERHOST__}/static/${file.targetPath}/${file.name}`;
-                saveFileToLocal(file, newTargetPath);
+                saveFileToLocal(file, `./public/${file.targetPath}/${file.name}`);
                 resolve(newTargetPath);
             } catch (e: any) {
                 reject(e);
@@ -67,7 +67,7 @@ export async function uploadFiles(files: UploadFile[]) {
             try {
                 for (const file of files) {
                     const newTargetPath = `${__FATPAPERUSERSERVERHOST__}/static/${file.targetPath}/${file.name}`;
-                    saveFileToLocal(file, newTargetPath);
+                    saveFileToLocal(file, `./public/${file.targetPath}/${file.name}`);
                     newTargetPathArr.push(newTargetPath);
                 }
                 resolve(newTargetPathArr);
@@ -95,7 +95,7 @@ export async function deleteFiles(filePaths: string[]) {
         } else {
             try {
                 for (const filePath of filePaths) {
-                    deleteFileFromLocal(filePath);
+                    deleteFileFromLocal(`./public/${filePath}`);
                 }
                 resolve("success");
             } catch (e: any) {
@@ -111,5 +111,5 @@ function saveFileToLocal(file: UploadFile, targetPath: string) {
 }
 
 function deleteFileFromLocal(filePath: string) {
-    console.log(filePath)
+    fs.unlinkSync(filePath);
 }

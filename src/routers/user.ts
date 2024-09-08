@@ -221,7 +221,6 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 			};
 			res.status(200).json(resContent);
 		} catch (e: any) {
-			deleteFiles([`fatpaper/user/avatar/${avatarFileName}`])
 			const resContent: ResInterface = {
 				status: 500,
 				msg: e.message || "数据库处理错误",

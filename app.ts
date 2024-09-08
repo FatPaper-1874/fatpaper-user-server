@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 import routerUser from "./src/routers/user";
 import {serverLog} from "./src/utils/logger";
 import chalk from "chalk";
-import {TOKENKEY, APIPORT} from "./src/static";
+import {APIPORT} from "./src/static";
 
 async function bootstrap() {
     try {

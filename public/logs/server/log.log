@@ -911,3 +911,28 @@
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-07 16:16:47"}
 {"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-07 16:41:57"}
 {"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-07 16:41:57"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-07 22:33:19"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-07 22:33:19"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-09-08 13:53:31"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-09-08 13:54:30"}
+{"level":"error","message":"ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client","timestamp":"2024-09-08 13:54:30"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-09-08 14:06:11"}
+{"level":"error","message":"ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client","timestamp":"2024-09-08 14:06:11"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-09-08 14:06:57"}
+{"level":"error","message":"\u001b[1m\u001b[41mER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client\u001b[49m\u001b[22m","timestamp":"2024-09-08 14:06:57"}
+{"level":"error","message":"\u001b[1m\u001b[41m 服务器出错: \u001b[49m\u001b[22m","timestamp":"2024-09-08 14:08:44"}
+{"level":"error","message":"\u001b[1m\u001b[41mER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client\u001b[49m\u001b[22m","timestamp":"2024-09-08 14:08:44"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 14:10:12"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 14:10:12"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 15:22:47"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 15:22:47"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 15:54:07"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 15:54:07"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 16:10:50"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 16:10:50"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 16:11:20"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 16:11:20"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 16:20:40"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 16:20:40"}
+{"level":"info","message":"\u001b[1m\u001b[42m 数据库连接成功 \u001b[49m\u001b[22m","timestamp":"2024-09-08 16:22:34"}
+{"level":"info","message":"\u001b[1m\u001b[42m API服务启动成功 83端口 \u001b[49m\u001b[22m ","timestamp":"2024-09-08 16:22:34"}
