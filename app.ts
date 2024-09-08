@@ -41,6 +41,7 @@ async function bootstrap() {
         });
     } catch (e: any) {
         serverLog(`${chalk.bold.bgRed(` 服务器出错: `)}`, "error");
+        serverLog(`${chalk.bold.bgRed(e.message)}`, "error");
     }
 }
 
