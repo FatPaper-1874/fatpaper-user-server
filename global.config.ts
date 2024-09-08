@@ -11,4 +11,4 @@ export const __TC_KEY__ = tc_key;
 export const __TC_BUCKET_NAME__ = tc_bn;
 export const __TC_REGION__ = tc_r;
 
-export const __FATPAPERUSERSERVERHOST__ = `${process.env.NODE_ENV == "production" ? "user-server" : "localhost"}:${FATPAPER_USER_SERVER_PORT}`
+export const __FATPAPERUSERSERVERHOST__ = `localhost:${FATPAPER_USER_SERVER_PORT}`
