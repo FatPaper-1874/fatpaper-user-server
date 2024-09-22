@@ -7,7 +7,7 @@ import path from "path";
 import fs from "fs";
 import { getImageMainColor } from "../utils";
 import { privateKey, publicKey } from "../utils/rsakey";
-import {deleteFiles, uploadFile} from "../utils/file-uploader";
+import { deleteFiles, uploadFile } from "../utils/file-uploader";
 // import { setRedis } from "../utils/redis";
 
 const avatarMulter = multer({ dest: "public/avatars" });
@@ -206,14 +206,17 @@ routerUser.post("/register", avatarMulter.single("avatar"), async (req, res) => 
 
 	fs.renameSync(oldName, avatarFilePath);
 
-	const userColor = await getImageMainColor(path.join(process.cwd(), avatarFilePath));
-	const { useraccount, username, password } = req.body;
+	const { useraccount, username, password, color } = req.body;
 
-	if (useraccount && username && password) {
+	if (useraccount && username && password && color) {
 		const avatarFileName = filename + fileType;
 		try {
-			const avatarFileUrl = await uploadFile({filePath: avatarFilePath, name: avatarFileName, targetPath: `fatpaper/user/avatar/`})
-			const user = await createUser(useraccount, username, password, avatarFileUrl, userColor || undefined);
+			const avatarFileUrl = await uploadFile({
+				filePath: avatarFilePath,
+				name: avatarFileName,
+				targetPath: `fatpaper/user/avatar/`,
+			});
+			const user = await createUser(useraccount, username, password, avatarFileUrl, color || undefined);
 			const resContent: ResInterface = {
 				status: 200,
 				msg: "注册成功",
